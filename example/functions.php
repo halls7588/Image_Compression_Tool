@@ -62,11 +62,11 @@ function png($source, $destination, $qt = 9){
     return $compressed;
 }
 
-function jpg($source, $destination, $quality){
+function jpg($source, $destination, $qt = 30){
     
     $image = imagecreatefromjpeg($source);
     
-    imagejpeg($image, $destination, 30);
+    imagejpeg($image, $destination, $qt);
     
     $compressed = base64_encode(file_get_contents($destination));
     return $compressed;
