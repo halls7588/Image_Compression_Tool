@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Image Preview and Compression Tool</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+
+<body translate="no" >
+
+  <h1>Image Preview and Compression Tool</h1>
+
+<div style="text-align:center;"><button type="button" class="button" onclick="toggleTheme(); return false">Light | Dark</button></div>
+
+<div id="drop-area">
+  <form class="my-form">
+    <p>Upload multiple files with by dragging and dropping images into the dashed region, or click upload image button.
+    Click on the image you want to see the details preview or click the X button to remove it. Click the compress image button to compress the selected image.
+    <strong>NOTE: Animated GIF Files Will Lose Their Animations.</strong></p>
+    <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files);">
+    <label class="button" for="fileElem">Select some files</label>
+  </form>
+  <progress id="progress-bar" max=100 value=0></progress>
+  <div id="gallery" ></div>
+</div>
+<div id="frag"></div>
+  
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='main.js'></script>
+</body>
+
+</html>
+ 
