@@ -36,9 +36,9 @@ switch ($format) {
         $mime = "data:image/png;base64,";
         
         if ($qt > 10)
-            $qt %= 10;
+            $qt = ($qt/100)*10;
         
-        $image = png($source_img, $destination_img, 9);
+        $image = png($source_img, $destination_img, $qt);
         break;
     case "gif":
         $mime  = "data:image/gif;base64,";
